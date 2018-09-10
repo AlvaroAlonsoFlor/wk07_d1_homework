@@ -8,7 +8,7 @@ PrimeChecker.prototype.bindEvents = function () {
   PubSub.subscribe('FormView:number-submitted', (event) => {
     const inputtedNumber = event.detail;
     const result = this.isPrime(inputtedNumber);
-
+    console.log(result);
     PubSub.publish('PrimeChecker:result-calculated', result);
 
   })
@@ -25,5 +25,7 @@ PrimeChecker.prototype.isPrime = function (number) {
 
   if (number <= 1) { result = false }
 
-  return result
+  return result;
 };
+
+module.exports = PrimeChecker;
