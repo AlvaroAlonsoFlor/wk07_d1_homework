@@ -16,7 +16,6 @@ ResultView.prototype.bindEvents = function () {
 ResultView.prototype.displayResult = function (result) {
 
   const resultElement = document.querySelector('#result');
-
   resultElement.textContent = `The number is ${this.processBoolean(result)}`
 };
 
